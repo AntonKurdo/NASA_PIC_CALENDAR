@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/NASA_PIC_CALENDAR/static/css/main.5332b9f1.chunk.css",
+    "main.js": "/NASA_PIC_CALENDAR/static/js/main.ee03225a.chunk.js",
+    "main.js.map": "/NASA_PIC_CALENDAR/static/js/main.ee03225a.chunk.js.map",
+    "runtime-main.js": "/NASA_PIC_CALENDAR/static/js/runtime-main.59147325.js",
+    "runtime-main.js.map": "/NASA_PIC_CALENDAR/static/js/runtime-main.59147325.js.map",
+    "static/css/2.80468ea7.chunk.css": "/NASA_PIC_CALENDAR/static/css/2.80468ea7.chunk.css",
+    "static/js/2.59c03166.chunk.js": "/NASA_PIC_CALENDAR/static/js/2.59c03166.chunk.js",
+    "static/js/2.59c03166.chunk.js.map": "/NASA_PIC_CALENDAR/static/js/2.59c03166.chunk.js.map",
+    "index.html": "/NASA_PIC_CALENDAR/index.html",
+    "precache-manifest.a1f2a9739f0883530816d4c2363d42b6.js": "/NASA_PIC_CALENDAR/precache-manifest.a1f2a9739f0883530816d4c2363d42b6.js",
+    "service-worker.js": "/NASA_PIC_CALENDAR/service-worker.js",
+    "static/css/2.80468ea7.chunk.css.map": "/NASA_PIC_CALENDAR/static/css/2.80468ea7.chunk.css.map",
+    "static/css/main.5332b9f1.chunk.css.map": "/NASA_PIC_CALENDAR/static/css/main.5332b9f1.chunk.css.map",
+    "static/js/2.59c03166.chunk.js.LICENSE.txt": "/NASA_PIC_CALENDAR/static/js/2.59c03166.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.59147325.js",
+    "static/css/2.80468ea7.chunk.css",
+    "static/js/2.59c03166.chunk.js",
+    "static/css/main.5332b9f1.chunk.css",
+    "static/js/main.ee03225a.chunk.js"
+  ]
+}
