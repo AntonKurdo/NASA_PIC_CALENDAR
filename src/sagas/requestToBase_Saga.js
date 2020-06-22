@@ -20,21 +20,25 @@ function * workerRequestToBase({payload: date}) {
             if (res.status === 200) {
                 return res.json()
             } else {
-                  isError = true;
-                }
-            })
-            .then(res => {                
-                return res
-             })            
+                isError = true;
+            }
+        }).then(res => {
+            return res
+        })
     }
 
-    const data = yield call(fetchData)
-    
+    const data = yield call(fetchData);
+
     if (!isError) {
         if (!data.url.includes('youtube')) {
             yield put({type: 'GET_DATA', payload: data})
         } else {
-            alert(`Sorry, there is no picture on this date, but you can watch the video of day on the link: ${data.url}`)
+            yield put({
+                type: 'ALERT_YOUTUBE_OPEN', payload: {
+                    text: 'Sorry, there is no picture on this date, but you can watch the video of the day on the ',
+                    url: data.url
+                }
+            })              
         }
     }
 

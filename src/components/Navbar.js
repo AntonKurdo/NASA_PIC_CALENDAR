@@ -11,8 +11,8 @@ export default function Navbar({ gallery, isLoader = true }) {
                     <NavLink className="nav-item nav-link" to="/calendar">Calendar</NavLink>
             <NavLink className="nav-item nav-link" to="/gallery">Gallery <sup>{gallery.length}</sup></NavLink>
                 </div>
-                <div class= {isLoader ? "spinner-border text-light nav_loader _active" : "spinner-border text-light nav_loader"} role="status">
-                    <span class="sr-only">Loading...</span>
+                <div className= {isLoader ? "spinner-border text-light nav_loader _active" : "spinner-border text-light nav_loader"} role="status">
+                    <span className="sr-only">Loading...</span>
                 </div>
             </div>
         </nav>

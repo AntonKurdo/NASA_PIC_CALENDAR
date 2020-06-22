@@ -5,19 +5,24 @@ import 'react-calendar/dist/Calendar.css';
 export default function CalendarPage({
     currentDate,
     currentImg,
-    currentPicTitle,
+    currentPicTitle ,
     currentPicExplanation,
     currentPicDate,
+    isAlertOpen,
+    isAlertFutureOpen,
     sendData,
     setCurrentDate,
     onSendPicToGal,
-    loaderActive
+    loaderActive,
+    onCloseAlert,
+    onOpenAlertFuture,
+    onCloseAlertFuture
 }) {
 
     function isDisabledBtn(title) {
         let flag = true;
         let arr = [];
-        let data = JSON.parse(localStorage.getItem('NASA_gallery'))
+        let data = JSON.parse(localStorage.getItem('NASA_gallery'));
         if (data) {
             data.forEach(item => {
                 arr.push(item.picTitle);
@@ -44,13 +49,25 @@ export default function CalendarPage({
             sendData(date)
             setCurrentDate(date)
             loaderActive();
+            onCloseAlert();
+            onCloseAlertFuture();
         } else {
-            alert('Sorry, chosen date is in future');
+            // alert('Sorry, chosen date is in future');
+            onOpenAlertFuture()
         }
     }
 
     return (
         <div className='calendar_page'>
+            <div className={isAlertOpen.status ? "alert alert-danger calendar__alert _active" : "alert alert-danger calendar__alert"} role="alert">
+                <span role='img' aria-label='emoji'>⚠️</span> {isAlertOpen.text}
+                <a href={isAlertOpen.url} onClick={onCloseAlert} target='_blank' rel="noopener noreferrer">link</a>
+                <div onClick={onCloseAlert}>X</div>
+            </div>
+            <div className={isAlertFutureOpen ? "alert alert-warning calendar__alert _active" : "alert alert-warning calendar__alert"} role="alert">
+                 <span> Sorry, chosen date is only in future </span> 
+                <div onClick={onCloseAlertFuture}>X</div>
+            </div>
             <div className='calendar_cont'>
                 <Calendar onChange={onChangeDate} value={currentDate}/>
             </div>

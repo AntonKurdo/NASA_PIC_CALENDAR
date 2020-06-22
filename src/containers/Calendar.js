@@ -7,7 +7,9 @@ export default connect(
         currentImg: state.currentImg,
         currentPicTitle: state.currentPicTitle,
         currentPicExplanation: state.currentPicExplanation,
-        currentPicDate: state.currentPicDate       
+        currentPicDate: state.currentPicDate,
+        isAlertOpen: state.isAlertOpen,
+        isAlertFutureOpen: state.isAlertFutureOpen
 }),
 dispatch => ({  
     sendData: (date) => {
@@ -22,6 +24,15 @@ dispatch => ({
     }, 
     loaderActive: () => {
         dispatch({ type: 'START_LOADER'})
-    }
+    },
+    onCloseAlert: () => {
+        dispatch({type: 'ALERT_YOUTUBE_CLOSE'})
+    }, 
+    onOpenAlertFuture: () => {
+        dispatch({type: 'ALERT_FUTURE_OPEN'})
+    }, 
+    onCloseAlertFuture: () => {
+        dispatch({type: 'ALERT_FUTURE_CLOSE'})
+    } 
 })
 )(Calendar)

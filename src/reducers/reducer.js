@@ -7,7 +7,13 @@ const INITIAL_STATE = {
     currentPicExplanation: '',
     currentPicDate: '',
     gallery: [], 
-    isLoader: false
+    isLoader: false,
+    isAlertOpen: {
+        status: false,
+        text: '',
+        url: 'https://www.youtube.com/'
+    },
+    isAlertFutureOpen: false
 };
 
 export default function (state = INITIAL_STATE, action) {
@@ -44,7 +50,28 @@ export default function (state = INITIAL_STATE, action) {
             return update(state, {
                 isLoader: {$set: false}
             })
-        
+        case 'ALERT_YOUTUBE_OPEN':
+            return update(state, {
+                isAlertOpen: {
+                    status: { $set: true },
+                    text: { $set: action.payload.text },
+                    url: {$set: action.payload.url}
+                }
+            })
+        case 'ALERT_YOUTUBE_CLOSE':
+            return update(state, {
+                isAlertOpen: {
+                    status: { $set: false }
+                }
+            })
+        case 'ALERT_FUTURE_OPEN':
+            return update(state, {
+                isAlertFutureOpen: {$set: true}
+            })
+        case 'ALERT_FUTURE_CLOSE':
+            return update(state, {
+                isAlertFutureOpen: {$set: false}
+            })
         default: return state;
 
     }    
