@@ -1,26 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import {Switch, Route} from "react-router-dom";
+import '../node_modules/bootstrap/dist/css/bootstrap.css';
+import './css/styles.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Navbar from './containers/Navbar';
+import Homepage from './components/Homepage';
+import Calendar from './containers/Calendar';
+import Gallery from './containers/Gallery'
+import Footer from './components/Footer';
+
+
+
+
+function App({getCurrentDate, getGalleryFromLS}) {
+
+    useEffect(() => {
+        getCurrentDate();
+        getGalleryFromLS();
+    }, [])
+
+    return (
+        <div className="App">
+            <Navbar/>
+            <Switch>
+                <Route path='/' exact>
+                    <Homepage/>
+                </Route>
+                <Route path='/calendar'>
+                    <Calendar/>
+                </Route>
+                <Route path='/gallery'>
+                   <Gallery />
+                </Route>
+            </Switch>
+            <Footer/>
+        </div>
+    );
 }
 
 export default App;
