@@ -13,7 +13,7 @@ function * workerRequestToBase({payload: date}) {
         ? '0' + date.getDate()
         : date.getDate();
     let fullDate = `${year}-${mounth}-${day}`;
-    let URL = `http://api.nasa.gov/planetary/apod?api_key=zpKx82ygfdep8Q6abpJX8DQJyKOns6ztJh3LeaAy&date=${fullDate}`;
+    let URL = `https://api.nasa.gov/planetary/apod?api_key=zpKx82ygfdep8Q6abpJX8DQJyKOns6ztJh3LeaAy&date=${fullDate}`;
     let isError = false;
     function fetchData() {
         return fetch(URL).then(res => {
