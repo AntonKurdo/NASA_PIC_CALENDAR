@@ -1,9 +1,10 @@
 import { connect } from 'react-redux';
 import Gallery from '../components/Gallery'
+import { getGalleryPicsSelector } from '../selectors/selectors';
 
 export default connect(
     state => ({   
-        galleryPics: state.gallery
+        galleryPics: getGalleryPicsSelector(state)
 }),
     dispatch => ({   
         onRemovePic: (title) => {

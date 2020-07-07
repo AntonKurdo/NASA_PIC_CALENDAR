@@ -1,10 +1,15 @@
 import { connect } from 'react-redux';
-import Navbar from '../components/Navbar'
+import Navbar from '../components/Navbar';
+import {
+    getGallerySelector,
+    getIsLoaderSelector
+} from '../selectors/selectors';
+
 
 export default connect(
     state => ({ 
-        gallery: state.gallery,  
-        isLoader: state.isLoader
+        gallery: getGallerySelector(state),  
+        isLoader: getIsLoaderSelector(state)
 }),
     dispatch => ({   
 })

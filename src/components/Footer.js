@@ -1,11 +1,12 @@
 import React from 'react';
+import logo from  '../assets/logo.png'
 
 export default function Footer() {
     return (
         <div className='footer'>
             <div className='footer_logo'>
                 <a href='https://api.nasa.gov' target='_blank' rel="noopener noreferrer">
-                    <img src='./assets/logo.png' alt='footer_link' />
+                    <img src={logo} alt='footer_link' />
                 </a>
             </div>
             <p>Created by <a
