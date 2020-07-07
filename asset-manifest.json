@@ -1,25 +1,26 @@
 {
   "files": {
     "main.css": "/NASA_PIC_CALENDAR/static/css/main.90821735.chunk.css",
-    "main.js": "/NASA_PIC_CALENDAR/static/js/main.b20657df.chunk.js",
-    "main.js.map": "/NASA_PIC_CALENDAR/static/js/main.b20657df.chunk.js.map",
+    "main.js": "/NASA_PIC_CALENDAR/static/js/main.64886be2.chunk.js",
+    "main.js.map": "/NASA_PIC_CALENDAR/static/js/main.64886be2.chunk.js.map",
     "runtime-main.js": "/NASA_PIC_CALENDAR/static/js/runtime-main.59147325.js",
     "runtime-main.js.map": "/NASA_PIC_CALENDAR/static/js/runtime-main.59147325.js.map",
     "static/css/2.80468ea7.chunk.css": "/NASA_PIC_CALENDAR/static/css/2.80468ea7.chunk.css",
-    "static/js/2.b51c42da.chunk.js": "/NASA_PIC_CALENDAR/static/js/2.b51c42da.chunk.js",
-    "static/js/2.b51c42da.chunk.js.map": "/NASA_PIC_CALENDAR/static/js/2.b51c42da.chunk.js.map",
+    "static/js/2.1953e408.chunk.js": "/NASA_PIC_CALENDAR/static/js/2.1953e408.chunk.js",
+    "static/js/2.1953e408.chunk.js.map": "/NASA_PIC_CALENDAR/static/js/2.1953e408.chunk.js.map",
     "index.html": "/NASA_PIC_CALENDAR/index.html",
-    "precache-manifest.b98f2b1ef46f722c5e2c65492c06cfcf.js": "/NASA_PIC_CALENDAR/precache-manifest.b98f2b1ef46f722c5e2c65492c06cfcf.js",
+    "precache-manifest.8b27e0d8d85959e0949b75dbf1f774b9.js": "/NASA_PIC_CALENDAR/precache-manifest.8b27e0d8d85959e0949b75dbf1f774b9.js",
     "service-worker.js": "/NASA_PIC_CALENDAR/service-worker.js",
     "static/css/2.80468ea7.chunk.css.map": "/NASA_PIC_CALENDAR/static/css/2.80468ea7.chunk.css.map",
     "static/css/main.90821735.chunk.css.map": "/NASA_PIC_CALENDAR/static/css/main.90821735.chunk.css.map",
-    "static/js/2.b51c42da.chunk.js.LICENSE.txt": "/NASA_PIC_CALENDAR/static/js/2.b51c42da.chunk.js.LICENSE.txt"
+    "static/js/2.1953e408.chunk.js.LICENSE.txt": "/NASA_PIC_CALENDAR/static/js/2.1953e408.chunk.js.LICENSE.txt",
+    "static/media/logo.png": "/NASA_PIC_CALENDAR/static/media/logo.0e756da9.png"
   },
   "entrypoints": [
     "static/js/runtime-main.59147325.js",
     "static/css/2.80468ea7.chunk.css",
-    "static/js/2.b51c42da.chunk.js",
+    "static/js/2.1953e408.chunk.js",
     "static/css/main.90821735.chunk.css",
-    "static/js/main.b20657df.chunk.js"
+    "static/js/main.64886be2.chunk.js"
   ]
 }
