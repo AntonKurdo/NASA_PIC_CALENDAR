@@ -1,38 +1,87 @@
+import { createSelector } from 'reselect';
+
+
 //  NAVBAR
 
-export const getGallerySelector = (state) => {
+const getGallery = (state) => {    
     return state.gallery;
 }
-export const getIsLoaderSelector = (state) => {
+export const getGallerySelector = createSelector(getGallery, (gallery) => {    
+    return gallery;
+})
+
+
+const getIsLoader = (state) => {
     return state.isLoader
 }
+export const getIsLoaderSelector = createSelector(getIsLoader, (isLoader) => {
+    return isLoader;
+})
+
 
 //  GALLERY
 
-export const getGalleryPicsSelector = (state) => {
+const getGalleryPics = (state) => {
     return state.gallery;
 }
+export const getGalleryPicsSelector = createSelector(getGalleryPics, (gallery) => {
+    return gallery;
+})
+
 
 // CALENDAR
 
-export const getCurrentDateSelector = (state) => {
+const getCurrentDate = (state) => {
     return state.currentDate;
 }
-export const getCurrentImgSelector = (state) => {
+export const getCurrentDateSelector = createSelector(getCurrentDate, (date) => {
+    return date;
+})
+
+
+const getCurrentImg = (state) => {
     return state.currentImg;
 }
-export const getCurrentPicTitleSelector = (state) => {
+export const getCurrentImgSelector = createSelector(getCurrentImg, (currentImg) => {
+    return currentImg;
+})
+
+
+const getCurrentPicTitle = (state) => {
     return state.currentPicTitle;
 }
-export const getCurrentPicExplanationSelector = (state) => {
+export const getCurrentPicTitleSelector = createSelector(getCurrentPicTitle, (currentPicTitle) => {
+    return currentPicTitle;
+})
+
+
+const getCurrentPicExplanation = (state) => {
     return state.currentPicExplanation;
 }
-export const getCurrentPicDateSelector = (state) => {
+export const getCurrentPicExplanationSelector = createSelector(getCurrentPicExplanation, (currentPicExplanation) => {
+    return currentPicExplanation;
+})
+
+
+const getCurrentPicDate = (state) => {
     return state.currentPicDate;
 }
-export const getIsAlertOpenSelector = (state) => {
+export const getCurrentPicDateSelector = createSelector(getCurrentPicDate, (currentPicDate) => {
+    return currentPicDate;
+})
+
+
+const getIsAlertOpen = (state) => {
     return state.isAlertOpen;
 }
-export const getIsAlertFutureOpenSelector = (state) => {
+export const getIsAlertOpenSelector = createSelector(getIsAlertOpen, (isAlertOpen) => {
+    return isAlertOpen;
+})
+
+
+const getIsAlertFutureOpen = (state) => {
     return state.isAlertFutureOpen;
 }
+export const getIsAlertFutureOpenSelector = createSelector(getIsAlertFutureOpen, (isAlertFutureOpen) => {
+    return isAlertFutureOpen;
+})
